@@ -263,3 +263,105 @@
   color: #49b1f5 !important;
   text-shadow: 0 0 3px rgba(73, 177, 245, 0.5); /* 发光效果 */
 }
+
+/* ==================================
+   文章头部样式 - 精准修复版
+   ================================== */
+
+/* 1. 头部整体定位与居中 */
+#page-header #post-info {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center !important;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 2. 标题样式 */
+#page-header #post-info .post-title {
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  color: #fff !important;
+  margin-bottom: 15px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* 3. 元信息通用设置 (字体、颜色、阴影) */
+#page-header #post-info #post-meta {
+  color: #eee !important;
+  font-size: 14px !important;
+  line-height: 2 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* 4. 强制两行居中排列 */
+#page-header #post-info .meta-firstline,
+#page-header #post-info .meta-secondline {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  width: 100%;
+}
+
+/* ==================================
+   【核心修复】分隔符精准注入
+   ================================== */
+
+/* 第一步：隐藏主题自带的所有分隔符 */
+#page-header #post-info .post-meta-separator {
+  display: none !important;
+}
+
+/* 第二步：定义竖线样式 (公用) */
+.custom-separator::after {
+  content: "|" !important;
+  margin: 0 16px !important; /* 想要更宽就改这里，比如 20px */
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: normal;
+  display: inline-block;
+}
+
+/* 第三步：在【发表日期】后面加竖线 (分隔 更新日期) */
+#page-header #post-info .post-meta-date-created::after {
+  content: "|" !important;
+  margin: 0 16px !important;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 第四步：在【字数】后面加竖线 (分隔 阅读时长) */
+#page-header #post-info .word-count::after {
+  content: "|" !important;
+  margin: 0 16px !important;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 第五步：在【阅读时长模块】后面加竖线 (分隔 浏览量) */
+/* 注意：.post-meta-wordcount 包含了字数和时长，所以它的后面就是浏览量 */
+#page-header #post-info .post-meta-wordcount::after {
+  content: "|" !important;
+  margin: 0 16px !important;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==================================
+   细节优化
+   ================================== */
+
+/* 图标与文字间距 */
+#page-header #post-info i.post-meta-icon {
+  margin-right: 6px !important;
+}
+
+/* 链接文字样式 */
+#page-header #post-info a {
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: all 0.3s;
+}
+#page-header #post-info a:hover {
+  color: #49b1f5 !important;
+  text-decoration: underline !important;
+}
