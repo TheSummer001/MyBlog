@@ -45,3 +45,78 @@
 [data-theme="dark"] {
   --card-bg: rgba(25, 25, 25, 0.8);
 }
+
+/* ==================================
+   Butterfly 主题右下角按钮 - 深色风格样式
+   ================================== */
+
+/* 1. 设置按钮的基本样式：深色背景、圆角、浅色图标 */
+/* 修改选择器以适应所有情况 */
+#rightside > div > button,
+#rightside > div > a,
+#rightside > button,
+#rightside > a {
+    /* 这里保持原来的样式内容不变，如下： */
+    background-color: rgba(40, 40, 40, 0.9) !important;
+    color: #ccc !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    margin-bottom: 6px !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    display: flex !important;      /* 新增：确保内容居中 */
+    align-items: center !important; /* 新增：确保内容居中 */
+    justify-content: center !important; /* 新增：确保内容居中 */
+}
+
+/* 2. 特别指定“夜间模式”按钮的图标颜色为橙色/黄色 */
+/* 注意：这里假设夜间模式按钮的类名包含 'darkmode'，如果无效可能需要检查元素 */
+#rightside > div > button.darkmode_switchbutton > i,
+#rightside > div > a#darkmode_click > i {
+    color: #f39c12 !important; /* 橙黄色 */
+}
+
+/* 3. 鼠标悬停时的效果 */
+#rightside > div > button:hover,
+#rightside > div > a:hover {
+    /* 悬停时背景稍微变亮 */
+    background-color: rgba(60, 60, 60, 0.9) !important;
+    /* 悬停时图标变白 */
+    color: #fff !important;
+}
+
+
+/* ==================================
+   顶部导航栏布局修改：菜单居中 + 搜索靠右
+   ================================== */
+
+/* 仅在电脑端生效 (宽度大于768px)，避免破坏手机端样式 */
+@media screen and (min-width: 768px) {
+    
+    /* 1. 将“首页、归档、标签...”这些菜单项 绝对定位到页面正中间 */
+    #nav .menus_items {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        /* 确保菜单文字不换行 */
+        white-space: nowrap !important;
+    }
+
+    /* 2. 确保原本的菜单容器（现在只剩下搜索按钮了）依然靠右 */
+    #nav #menus {
+        /* 强制靠右对齐 */
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        /* 避免被中间的菜单挡住 */
+        z-index: 10 !important;
+    }
+
+    /* 3. 可选：微调搜索按钮的位置，让它看起来更舒服 */
+    #search-button {
+        padding-left: 10px; 
+    }
+}

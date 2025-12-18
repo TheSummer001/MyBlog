@@ -48,8 +48,9 @@ code_blocks:
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/TheSummer001 || Github || '#24292e'
-  fas fa-envelope: 2026263245@qq.com || Email
-  fas fa-qq: 2026263245 || qq
+  fas fa-envelope: mailto:2026263245@qq.com || Email || '#e6a23c'
+  fab fa-qq: tencent://message/?uin=2026263245 || QQ || '#1296db'
+  fab fa-weixin: /img/wechat.jpg || WeChat || '#7bb32e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # --------------------------------------
@@ -96,7 +97,7 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background: /img/preview.jpg
+background: /img/bg.jpg
 
 cover:
   # Disable the cover or not
@@ -402,11 +403,11 @@ rightside_scroll_percent: false
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: false
+  enable: true
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
-  show:
+  show: readmode,darkmode,comment,hideAside,toc,translate
 
 # Animation for the bottom right config button
 rightside_config_animation: true
