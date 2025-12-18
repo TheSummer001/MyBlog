@@ -433,3 +433,40 @@
   42% { transform: scale(1.3); }
   70% { transform: scale(1); }
 }
+
+
+/* 首页 - 蓝色 (电脑端 + 手机端) */
+#page-header .menus_items .fa-home, 
+#sidebar-menus .fa-home {
+  color: #49b1f5;
+}
+
+/* 归档 - 橙色 */
+#page-header .menus_items .fa-archive,
+#sidebar-menus .fa-archive {
+  color: #F97C3C;
+}
+
+/* 标签 - 粉色 */
+#page-header .menus_items .fa-tags,
+#sidebar-menus .fa-tags {
+  color: #FF85C0;
+}
+
+/* 分类 - 紫色 */
+#page-header .menus_items .fa-folder-open,
+#sidebar-menus .fa-folder-open {
+  color: #9C27B0;
+}
+
+/* 关于 - 红色 */
+#page-header .menus_items .fa-heart,
+#sidebar-menus .fa-heart {
+  color: #FF4E6A;
+}
+
+#page-header .menus_items .menus_item:hover i {
+    transform: scale(1.2) rotate(10deg);
+    transition: all 0.3s;
+}
+
