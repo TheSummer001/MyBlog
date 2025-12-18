@@ -181,3 +181,85 @@
   display: none;
 }
 }
+
+
+/* 1. 页脚总容器：强制垂直排列 */
+#footer-wrap {
+  display: flex !important;
+  flex-direction: column !important; /* 关键：让元素从上到下堆叠 */
+  align-items: center !important;    /* 水平居中 */
+  justify-content: center !important;
+  padding: 20px 0 !important;
+}
+
+/* 2. 统计信息区域：高清胶囊样式 */
+.statistics-footer {
+  /* 布局 */
+  display: flex;
+  flex-wrap: wrap;           /* 允许换行 */
+  justify-content: center;
+  margin-bottom: 15px;       /* 胶囊和下方版权信息的距离 */
+  line-height: 2;
+  
+  /* --- 核心：高清背景 --- */
+  background: rgba(0, 0, 0, 0.6);   /* 深色半透明背景 */
+  backdrop-filter: blur(5px);       /* 毛玻璃模糊 */
+  padding: 5px 20px;                /* 内边距 */
+  border-radius: 50px;              /* 圆角 */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* 微弱的白边，增加精致感 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);      /* 淡淡的阴影 */
+  
+  /* 宽度自适应 */
+  width: fit-content;
+  max-width: 95vw; /* 防止手机端溢出 */
+}
+
+/* 3. 单个统计项 (纯白文字) */
+.footer-item {
+  margin: 0 8px;
+  white-space: nowrap;
+  
+  /* 强制文字清晰度 */
+  color: #ffffff !important;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 文字黑阴影，防背景干扰 */
+  transition: all 0.3s;
+}
+
+/* 4. 图标高亮 */
+.footer-item i {
+  margin-right: 5px;
+  color: #49b1f5 !important; /* 蓝色图标 */
+  text-shadow: none;         /* 图标不加阴影，保持鲜亮 */
+}
+
+/* 鼠标悬停 */
+.footer-item:hover {
+  transform: translateY(-2px);
+  color: #49b1f5 !important;
+}
+
+/* 5. 下方的版权和框架信息 */
+/* 5. 下方的版权和框架信息 - 高清修复版 */
+.copyright, 
+.framework-info {
+  font-size: 14px;
+  margin: 4px 0;
+  
+  /* 核心修复：强制纯白 + 黑色阴影 */
+  color: #ffffff !important; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* 加重阴影浓度 */
+  font-weight: 500; /* 稍微加粗让字更有分量 */
+}
+
+/* 修复链接文字 (Hexo, Butterfly) 的颜色 */
+.framework-info a {
+  color: #ffffff !important;
+  transition: all 0.3s;
+}
+
+/* 链接悬停时变蓝，增加交互感 */
+.framework-info a:hover {
+  color: #49b1f5 !important;
+  text-shadow: 0 0 3px rgba(73, 177, 245, 0.5); /* 发光效果 */
+}
