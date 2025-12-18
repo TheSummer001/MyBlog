@@ -1,0 +1,20 @@
+/* 1. 设置全局背景图不随页面滚动 (Fixed) */
+#web_bg {
+  background-image: url(/img/bg.jpg);
+  background-attachment: fixed; /* 核心：让背景固定 */
+  background-size: cover;       /* 核心：铺满屏幕 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 2. 让文章卡片变半透明 (磨砂玻璃效果) */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.85); /* 0.85 代表透明度，越小越透 */
+  --btn-bg: rgba(255, 255, 255, 0.85);
+  --sidebar-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* 3. (可选) 如果是暗色模式，也要调整透明度 */
+[data-theme="dark"] {
+  --card-bg: rgba(25, 25, 25, 0.8);
+}
