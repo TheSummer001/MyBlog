@@ -1060,7 +1060,12 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     - <link rel="stylesheet" href="/css/custom.css">
+    ## 星空背景
+    - <link rel="stylesheet" href="/css/universe.css">
   bottom:
+  	# 星空背景
+    - <canvas id="universe"></canvas>
+    - <script defer src="/js/universe.js"></script>
     # - <script src="xxxx"></script>
 
 # CDN Settings
