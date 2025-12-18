@@ -1075,6 +1075,8 @@ inject:
 
     - <script src="/js/runtime.js"></script>
 
+    - <script src="/js/love_time.js"></script>
+
 # CDN Settings
 # Don't modify the following settings unless you know how they work
 CDN:

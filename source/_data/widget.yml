@@ -1,0 +1,29 @@
+# 侧边栏挂件配置 (source/_data/widget.yml)
+
+# top 表示显示在普通侧边栏区域 (跟随滚动)
+# 如果你想让它固定在底部不动，把 top 改成 bottom
+# source/_data/widget.yml
+
+top:
+  - class_name: card-love
+    id_name: card-love
+    name: 恋爱计时
+    icon: fas fa-heart
+    order: 1
+    html: |
+      <div class="couple-box">
+        <img class="couple-pic" src="/img/ran.jpg" alt="头像1">
+        
+        <i class="fas fa-heart couple-heart" style="color: #ff5050; font-size: 2.5rem;"></i>
+        
+        <img class="couple-pic" src="/img/juan.jpg" alt="头像2">
+      </div>
+      <div id="love-time" data-start="2020/11/08">
+        <div class="love-text">我们已经在一起</div>
+        <div class="love-timer">
+          <span id="love-day">0</span>天
+          <span id="love-hour">0</span>时
+          <span id="love-min">0</span>分
+          <span id="love-sec">0</span>秒
+        </div>
+      </div>

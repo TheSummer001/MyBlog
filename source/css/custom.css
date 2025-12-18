@@ -365,3 +365,71 @@
   color: #49b1f5 !important;
   text-decoration: underline !important;
 }
+
+
+/* 恋爱计时侧边栏样式 */
+.card-love .couple-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-love .couple-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  padding: 2px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card-love .couple-pic:hover {
+  transform: scale(1.1);
+}
+
+.card-love .couple-heart {
+  margin: 0 15px;
+  animation: heartbeat 1.3s ease-in-out infinite;
+  
+  /* 如果觉得图标位置不正，可以加这一行微调 */
+  vertical-align: middle; 
+}
+
+#love-time {
+  text-align: center;
+  font-size: 14px;
+}
+
+.love-text {
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.love-timer span {
+  font-weight: bold;
+  color: var(--text-highlight-color); /* 跟随主题高亮色 */
+  margin: 0 2px;
+  font-size: 16px;
+}
+/* 让恋爱计时区域显示为可点击状态 */
+#love-time {
+  cursor: pointer;
+  user-select: none; /* 防止点击时选中文字，体验更好 */
+  transition: all 0.3s;
+}
+
+/* 鼠标悬停时稍微变亮一点，增加交互感 */
+#love-time:hover {
+  opacity: 0.8;
+}
+
+/* 补充的心跳动画关键帧 */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
