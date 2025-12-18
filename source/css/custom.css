@@ -1,0 +1,47 @@
+/* ==================================
+   1. 全局背景图设置 (核心基础)
+   ================================== */
+#web_bg {
+  /* 这里换成你自己的图片路径 */
+  background-attachment: fixed;       /* 核心：背景图固定不动 */
+  background-size: cover;             /* 核心：铺满全屏 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ==================================
+   2. 头部与页脚彻底透明化 (去除遮罩)
+   这就是你截图里代码的作用：把默认的黑白遮罩层去掉
+   ================================== */
+#page-header,
+#footer {
+  background: transparent !important;
+}
+
+/* 去除白天模式的伪类遮罩 */
+#page-header::before,
+#footer::before {
+  background: transparent !important;
+}
+
+/* 去除夜间模式的伪类遮罩 */
+[data-theme="dark"] #page-header::before,
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+
+/* ==================================
+   3. 文章卡片磨砂玻璃效果 (Glassmorphism)
+   让文章背景半透明，否则背景图会被纯白卡片挡住
+   ================================== */
+:root {
+  /* 0.85 代表透明度，数值越小越透。建议 0.8 到 0.9 之间 */
+  --card-bg: rgba(255, 255, 255, 0.85);   
+  --btn-bg: rgba(255, 255, 255, 0.85);    
+  --sidebar-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* 夜间模式下的卡片透明度 (深色背景) */
+[data-theme="dark"] {
+  --card-bg: rgba(25, 25, 25, 0.8);
+}
