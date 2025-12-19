@@ -295,6 +295,7 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/TheSummer001
+  #公告
   card_announcement:
     enable: true
     content: This is my Blog
@@ -899,12 +900,12 @@ click_heart:
 clickShowText:
   enable: false
   text:
-    # - I
-    # - LOVE
-    # - YOU
+     - I
+     - LOVE
+     - YOU
   fontSize: 15px
   random: false
-  mobile: false
+  mobile: enable
 
 # --------------------------------------
 # Lightbox Settings
