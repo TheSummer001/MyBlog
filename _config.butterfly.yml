@@ -648,8 +648,9 @@ giscus:
   light_theme: light
   dark_theme: dark
   js: https://giscus.app/client.js
-  mapping: title
+  
   option:
+    - mapping: title
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
