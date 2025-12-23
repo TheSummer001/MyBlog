@@ -17,3 +17,5 @@ _multiconfig.yml
 
 # Environment variables
 .env
+# Obsidian config
+.obsidian/
