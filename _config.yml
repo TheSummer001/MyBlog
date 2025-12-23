@@ -4,9 +4,9 @@
 
 # Site
 title: TooonRan's Blog
-subtitle:
-description: ""
-keywords:
+subtitle: Tech & Life
+description: "TooonRan的个人博客，分享编程技术、Hexo搭建教程、生活随笔以及效率工具心得。"
+keywords: TooonRan, Hexo, 博客, 编程, 技术, 生活
 author: TooonRan
 language: zh-CN
 timezone: "Asia/Shanghai"
