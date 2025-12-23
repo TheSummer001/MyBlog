@@ -758,8 +758,8 @@ ad:
 # --------------------------------------
 
 site_verification:
-  # - name: google-site-verification
-  #   content: xxxxxx
+   - name: google-site-verification
+     content: Qp3y7RwJHZ-BPkmt2yL0TpvuweqTY45Fv8L_Ho08_Vw
   # - name: baidu-site-verification
   #   content: xxxxxxx
 
