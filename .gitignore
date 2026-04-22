@@ -10,6 +10,7 @@ _multiconfig.yml
 # IDEs and Editors
 .vscode/
 .idea/
+CLAUDE.md
 
 # Backup files
 *.bak

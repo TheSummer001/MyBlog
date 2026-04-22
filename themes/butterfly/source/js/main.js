@@ -462,6 +462,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollTask = btf.throttle(() => {
       const currentTop = window.scrollY || document.documentElement.scrollTop
       const isDown = scrollDirection(currentTop)
+
+      // 如果启用了永久固定导航栏，跳过默认的滚动行为
+      if ($header.classList.contains('always-fixed')) {
+        isShowPercent && rightsideScrollPercent(currentTop)
+        checkDocumentHeight()
+        return
+      }
+
       if (currentTop > 56) {
         if (flag === '') {
           $header.classList.add('nav-fixed')

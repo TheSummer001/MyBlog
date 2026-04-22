@@ -480,29 +480,29 @@
 .post-reward .reward-button {
   /* 背景：蓝紫色科技感渐变 */
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
-  
+
   /* 字体颜色：强制纯白 */
   color: #ffffff !important;
-  
+
   /* 去除边框，加圆角 */
   border: none !important;
   border-radius: 50px !important;
-  
+
   /* 增加内边距，让按钮变宽变饱满 */
   padding: 10px 35px !important;
   margin-top: 20px !important; /* 增加一点顶部间距 */
-  
+
   /* 字体样式 */
   font-size: 16px !important;
   font-weight: bold !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  
+
   /* 初始阴影 (发光感) */
   box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4) !important;
-  
+
   /* 动画过渡 */
   transition: all 0.3s ease-in-out !important;
-  
+
   /* 确保块级居中 */
   display: inline-block !important;
   line-height: 2 !important;
@@ -517,10 +517,120 @@
 .post-reward .reward-button:hover {
   /* 背景反向渐变 */
   background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%) !important;
-  
+
   /* 爆发式光晕 */
   box-shadow: 0 8px 25px rgba(0, 242, 254, 0.7) !important;
-  
+
   /* 上浮动画 */
   transform: translateY(-3px) !important;
+}
+
+/* ==================================
+   顶部导航栏永久固定置顶功能
+   ================================== */
+
+/* 永久固定导航栏样式 */
+#page-header.always-fixed {
+  #nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* 导航栏文字颜色 */
+  #nav a,
+  #nav span.site-page,
+  #nav .site-name,
+  #nav #blog-info {
+    color: var(--font-color) !important;
+    text-shadow: none !important;
+  }
+
+  /* 导航栏悬停效果 */
+  #nav a:hover,
+  #nav span.site-page:hover {
+    color: var(--theme-color) !important;
+  }
+
+  /* 博客信息区域 */
+  #nav #blog-info {
+    color: var(--font-color) !important;
+  }
+
+  #nav #blog-info:hover {
+    color: var(--theme-color) !important;
+  }
+
+  /* 汉堡菜单按钮 */
+  #nav #toggle-menu {
+    color: var(--font-color) !important;
+  }
+
+  #nav #toggle-menu:hover {
+    color: var(--theme-color) !important;
+  }
+}
+
+/* 夜间模式下的永久固定导航栏 */
+[data-theme="dark"] #page-header.always-fixed {
+  #nav {
+    background: rgba(30, 30, 30, 0.85) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+/* 为页面内容添加顶部间距，防止被固定导航栏遮挡 */
+#page-header.always-fixed + .layout,
+#page-header.always-fixed + #content-inner,
+#page-header.always-fixed + #post,
+#page-header.always-fixed + #page {
+  padding-top: 60px !important;
+}
+
+/* 首页特殊处理 */
+#page-header.always-fixed.full_page {
+  #site-info {
+    padding-top: 80px !important;
+  }
+}
+
+/* 文章页特殊处理 */
+#page-header.always-fixed.post-bg {
+  #post-info {
+    bottom: 30px !important;
+  }
+}
+
+/* 响应式适配 - 手机端 */
+@media screen and (max-width: 768px) {
+  #page-header.always-fixed {
+    #nav {
+      padding: 0 16px !important;
+      height: 60px !important;
+    }
+  }
+
+  #page-header.always-fixed + .layout,
+  #page-header.always-fixed + #content-inner,
+  #page-header.always-fixed + #post,
+  #page-header.always-fixed + #page {
+    padding-top: 60px !important;
+  }
+}
+
+/* 响应式适配 - 平板端 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #page-header.always-fixed {
+    #nav {
+      padding: 0 24px !important;
+    }
+  }
 }

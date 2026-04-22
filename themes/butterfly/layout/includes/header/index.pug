@@ -1,6 +1,7 @@
 -
   const returnTopImg = img => img !== false ? img || theme.default_top_img : false
   const isFixedClass = theme.nav.fixed ? ' fixed' : ''
+  const isAlwaysFixedClass = theme.nav.always_fixed ? ' always-fixed' : ''
   var top_img = false
   let headerClassName = 'not-top-img'
   var bg_img = ''
@@ -26,7 +27,7 @@ if !theme.disable_top_img && page.top_img !== false
     - bg_img = getBgPath(top_img)
     - headerClassName = globalPageType === 'home' ? 'full_page' : globalPageType === 'post' ? 'post-bg' : 'not-home-page'
 
-header#page-header(class=`${headerClassName + isFixedClass}` style=bg_img)
+header#page-header(class=`${headerClassName + isFixedClass + isAlwaysFixedClass}` style=bg_img)
   include ./nav.pug
   if top_img !== false
     if globalPageType === 'post'
