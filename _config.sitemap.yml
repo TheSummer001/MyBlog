@@ -1,0 +1,12 @@
+# Sitemap 配置优化
+# 将此文件放在博客根目录下，命名为 _config.sitemap.yml
+
+sitemap:
+  path: sitemap.xml
+  # 包含的页面类型
+  template: ./sitemap_template.xml
+  # 相对路径
+  rel: false
+  # 优先级设置
+  tags: true
+  categories: true
