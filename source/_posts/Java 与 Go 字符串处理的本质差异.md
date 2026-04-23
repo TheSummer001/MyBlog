@@ -4,11 +4,12 @@ date: 2026-04-20 10:30:00
 tags:
   - Golang
   - Java
-  - 字符串处理
   - UTF-8
   - Unicode
 categories:
   - 思考
+keywords: Java, Golang, String
+description: 深度对比 Go 与 Java 的字符串底层机制。通过剖析 UTF-8 的字节序列与 UTF-16 的代码单元差异，揭示 Go 的“明确优于隐式”与 Java“抽象优于细节”的设计哲学，并提供实战开发中的最佳实践。
 ---
 
 ## 引言

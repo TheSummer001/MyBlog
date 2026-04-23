@@ -10,7 +10,7 @@ categories:
   - Golang
   - 云原生
 keywords: Golang, WSL, GOCV
-
+description: 解决在 WSL 环境下配置 GoCV 的依赖与版本匹配难题。本文记录了通过 apt 安装 OpenCV 底层库、降级适配 GoCV v0.31.0 的完整流程，并提供了一个基于 MJPEG 实现摄像头网页实时推流的 Go 实战源码与 CGO 编译指南。
 ---
 ### 第一阶段：WSL 环境准备 (在 WSL 终端操作)
 

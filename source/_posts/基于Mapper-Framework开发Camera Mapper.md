@@ -9,9 +9,8 @@ categories:
   - 后端技术
   - 云原生
 keywords: Golang, KubeEdge, Kubenetes
+description: 本文档记录了基于 KubeEdge 官方 `mapper-framework` 脚手架生成 Camera Mapper，并适配 GoCV (OpenCV) 进行视频流采集与推流的完整流程。
 ---
-
-本文档记录了基于 KubeEdge 官方 `mapper-framework` 脚手架生成 Camera Mapper，并适配 GoCV (OpenCV) 进行视频流采集与推流的完整流程。
 
 ## 1. 工程初始化
 

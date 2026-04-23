@@ -8,8 +8,8 @@ tags:
   - Java
   - SpringBoot
 categories:
-  - 后端技术
   - 数据库
+  - 后端技术
 keywords: Redis, docker, Spring Data Redis, Jedis
 description: Redis 基础概念、Docker 安装教程、常用命令详解以及 Jedis 和 Spring Data Redis 的集成实战。
 ---

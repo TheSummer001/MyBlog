@@ -1,5 +1,5 @@
 ---
-title: 浅尝 Vue3 
+title: 浅尝 Vue3
 date: 2026-01-20 20:11:42
 updated: 2026-01-20 20:11:42
 tags:
@@ -8,7 +8,7 @@ tags:
 categories:
   - 前端
 keywords: vue, typescript
-
+description: 记录了 Vue 3 + TypeScript 开发中的常见痛点与解决技巧。涵盖 CSS Flexbox 布局万能公式、Table 样式控制细节、Computed 计算属性的高阶用法以及 TS 类型报错排查，并附带“小黑记事本”与“购物车”两个经典案例的完整源码。
 ---
 ## 一、 CSS 布局与样式技巧
 
