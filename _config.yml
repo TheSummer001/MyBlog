@@ -13,7 +13,13 @@ timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://tooonran.xyz
+url: https://blog.tooonran.xyz
+# 添加备用域名（用于生成正确的 canonical URL）
+# 主域名
+canonical_url: https://blog.tooonran.xyz
+# 备用域名（会重定向到主域名）
+alternate_urls:
+  - https://tooonran.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
