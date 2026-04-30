@@ -4,7 +4,7 @@ date: 2026-04-29 15:40:00
 tags:
   - MyBatis
   - SQL
-  - 排查记录
+  - 问题排查
   - PostgreSQL
 categories:
   - 后端开发

@@ -3,7 +3,7 @@ title: 本地 WSL 环境下攻克 Go 语言 + GoCV 读取摄像头
 date: 2026-01-25 18:20:11
 updated: 2026-01-25 18:20:11
 tags:
-  - Golang
+  - Go
   - WSL
 categories:
   - 后端技术

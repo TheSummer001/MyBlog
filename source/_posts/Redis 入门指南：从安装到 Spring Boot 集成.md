@@ -6,7 +6,7 @@ tags:
   - Redis
   - NoSQL
   - Java
-  - SpringBoot
+  - Spring Boot
 categories:
   - 数据库
   - 后端技术

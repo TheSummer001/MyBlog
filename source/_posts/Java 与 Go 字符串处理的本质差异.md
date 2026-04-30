@@ -2,7 +2,7 @@
 title: 深度解析：Java 与 Go 字符串处理的本质差异
 date: 2026-04-20 10:30:00
 tags:
-  - Golang
+  - Go
   - Java
   - UTF-8
   - Unicode

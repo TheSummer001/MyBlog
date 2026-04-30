@@ -4,7 +4,7 @@ date: 2026-01-28 18:16:26
 updated: 2026-01-28 18:16:26
 tags:
   - KubeEdge
-  - Golang
+  - Go
 categories:
   - 后端技术
   - 云原生
