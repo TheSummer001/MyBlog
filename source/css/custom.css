@@ -13,19 +13,16 @@
    2. 头部与页脚彻底透明化 (去除遮罩)
    这就是你截图里代码的作用：把默认的黑白遮罩层去掉
    ================================== */
-#page-header,
 #footer {
   background: transparent !important;
 }
 
 /* 去除白天模式的伪类遮罩 */
-#page-header::before,
 #footer::before {
   background: transparent !important;
 }
 
 /* 去除夜间模式的伪类遮罩 */
-[data-theme="dark"] #page-header::before,
 [data-theme="dark"] #footer::before {
   background: transparent !important;
 }

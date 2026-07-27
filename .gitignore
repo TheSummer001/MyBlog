@@ -20,3 +20,7 @@ CLAUDE.md
 .env
 # Obsidian config
 .obsidian/
+AGENT.md
+AGENTS.md
+.claude
+.codegraph

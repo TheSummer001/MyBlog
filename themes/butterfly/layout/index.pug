@@ -2,4 +2,42 @@ extends includes/layout.pug
 
 block content
   include ./includes/mixins/indexPostUI.pug
-  +indexPostUI
+  - const spotlight = page.posts.data && page.posts.data.length ? page.posts.data[0] : null
+  #home-main-column
+    section.observatory-hero
+      .observatory-hero__art(role='img' aria-label='云海之上的技术观测站')
+      .observatory-hero__grid
+      .observatory-hero__content
+        .observatory-eyebrow
+          span.observatory-status
+          span FIELD NOTE / 技术观测站
+        h1 把线上问题，拆成可以复现的答案。
+        p 聚焦后端系统、数据链路与云原生实践。这里记录的不只是结论，还有定位问题时走过的每一步。
+        .observatory-actions
+          a.observatory-action.observatory-action--primary(href=url_for('/archives/'))
+            span 浏览技术档案
+            i.fas.fa-arrow-right
+          a.observatory-action.observatory-action--quiet(href=url_for('/categories/'))
+            span 按主题探索
+        .observatory-meta
+          span
+            i.fas.fa-code-branch
+            | 真实排障记录
+          span
+            i.fas.fa-database
+            | 后端与数据系统
+
+      if spotlight
+        - const spotlightLink = spotlight.link || spotlight.path
+        - const spotlightTitle = spotlight.title || _p('no_title')
+        a.observatory-signal(href=url_for(spotlightLink) title=spotlightTitle)
+          .observatory-signal__head
+            span
+              i.fas.fa-satellite-dish
+              | 当前观测
+            time(datetime=date_xml(spotlight.date))=date(spotlight.date, 'MM-DD')
+          strong=spotlightTitle
+          span.observatory-signal__open
+            | 打开现场记录
+            i.fas.fa-arrow-up-right-from-square
+    +indexPostUI

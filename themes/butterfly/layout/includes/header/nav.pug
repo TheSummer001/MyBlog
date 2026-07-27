@@ -1,5 +1,9 @@
 nav#nav
   span#blog-info
+    if theme.portal && theme.portal.enable
+      a.nav-portal-link(href=theme.portal.url title=theme.portal.name)
+        span=theme.portal.name
+        i.fas.fa-chevron-right
     a.nav-site-title(href=url_for('/'))
       if theme.nav.logo
         img.site-icon(src=url_for(theme.nav.logo) alt='Logo')
@@ -13,6 +17,9 @@ nav#nav
           span= '  ' + _p('post.back_to_home')
 
   #menus
+    if theme.darkmode.enable && theme.darkmode.button
+      button#nav-darkmode-toggle(type='button' aria-label='切换昼夜模式' title='切换昼夜模式')
+        i.fas.fa-sun
     if theme.search.use
       #search-button
         span.site-page.social-icon.search

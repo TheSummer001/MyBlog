@@ -21,6 +21,13 @@ nav:
   # false: navigation bar follows default behavior
   always_fixed: true
 
+# Reserved entry for the future TooonRan portal.
+# Set enable to true after https://tooonran.top/ is ready.
+portal:
+  enable: false
+  name: TooonRan
+  url: https://tooonran.top/
+
 menu:
   首页: / || fas fa-home
   归档: /archives/ || fas fa-archive
@@ -71,10 +78,10 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: /img/hero-observatory.jpg
 
 # The banner image of index page
-index_img:
+index_img: false
 
 # The banner image of archive page
 archive_img:
@@ -101,7 +108,7 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background: /img/bg.jpg
+background:
 
 cover:
   # Disable the cover or not
@@ -189,7 +196,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+index_layout: 1
 
 # Display the article introduction on homepage
 # 1: description
@@ -197,9 +204,9 @@ index_layout: 3
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   # If you set method to 2 or 3, the length need to config
-  length: 500
+  length: 160
 
 # --------------------------------------
 # Post Settings
@@ -299,7 +306,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: 后端开发工程师，记录真实系统中的排查、设计与实现。
     button:
       enable: true
       icon: fab fa-github
@@ -308,7 +315,7 @@ aside:
   #公告
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 持续记录真实问题的定位、复现与修复过程。
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -402,7 +409,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start: 7
   end: 23
@@ -811,7 +818,7 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -823,7 +830,7 @@ preloader:
 enter_transitions: true
 
 # Default display mode - light (default) / dark
-display_mode: dark
+display_mode: light
 
 # Configuration for beautifying the content of the article
 beautify:
@@ -858,7 +865,7 @@ hr_icon:
 # Typewriter Effect
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true
   shake: true
   mobile: false
@@ -1074,13 +1081,9 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     - <link rel="stylesheet" href="/css/custom.css">
-    ## 星空背景
-    - <link rel="stylesheet" href="/css/universe.css">
+    - <link rel="stylesheet" href="/css/observatory.css">
 
   bottom:
-  	# 星空背景
-    - <canvas id="universe"></canvas>
-    - <script defer src="/js/universe.js"></script>
     # - <script src="xxxx"></script>
     - <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     # 引入我们刚才写的 rightmenu.js
@@ -1089,6 +1092,7 @@ inject:
     - <script src="/js/runtime.js"></script>
 
     - <script src="/js/love_time.js"></script>
+    - <script src="/js/observatory-theme.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
