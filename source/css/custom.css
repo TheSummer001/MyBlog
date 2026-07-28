@@ -539,7 +539,11 @@
     -webkit-backdrop-filter: blur(10px) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     opacity: 1 !important;
-    transition: all 0.3s ease !important;
+    /* 不要过渡 left/width/transform，否则首屏会从屏幕右侧滑到居中位置 */
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease,
+      opacity 0.3s ease !important;
   }
 
   /* 导航栏文字颜色 */

@@ -119,13 +119,19 @@ button:focus-visible,
   width: min(calc(100% - 36px), 1400px) !important;
   height: 60px !important;
   padding: 0 18px 0 22px !important;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.82) !important;
   box-shadow: 0 12px 36px rgba(39, 76, 126, 0.12) !important;
   backdrop-filter: blur(18px) saturate(145%);
   -webkit-backdrop-filter: blur(18px) saturate(145%);
+}
+
+/* Butterfly 会在 DOMContentLoaded 时给导航添加 show，并用入场动画覆盖 transform。
+   固定导航必须从第一帧就保持水平居中，不能参与这段动画。 */
+#page-header.always-fixed #nav.show {
+  animation: none !important;
 }
 
 [data-theme='dark'] #page-header.always-fixed #nav {

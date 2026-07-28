@@ -33,6 +33,7 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
+  订阅: /rss2.xml || fas fa-rss
   关于: /about/ || fas fa-heart
 
 # --------------------------------------

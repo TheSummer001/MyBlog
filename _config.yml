@@ -31,6 +31,23 @@ search:
   field: post
   content: true
 
+# RSS / Atom feeds
+# Prefer /rss2.xml when consuming recent posts from the portal homepage.
+feed:
+  enable: true
+  type:
+    - rss2
+    - atom
+  path:
+    - rss2.xml
+    - atom.xml
+  limit: 20
+  content: false
+  content_limit: 240
+  order_by: -date
+  icon: /img/favicon-32x32.png
+  autodiscovery: true
+
 # Directory
 source_dir: source
 public_dir: public
