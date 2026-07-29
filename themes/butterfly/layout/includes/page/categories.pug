@@ -1,1 +1,17 @@
-.category-lists!= list_categories()
+section.taxonomy-hub.taxonomy-hub--categories(aria-labelledby='category-index-title')
+  header.taxonomy-hub__header
+    .taxonomy-hub__copy
+      span.taxonomy-hub__kicker TOPIC CHANNELS
+      h1#category-index-title 分类目录
+      p 沿主题层级浏览长期整理的技术档案。
+    .taxonomy-hub__metric
+      strong= site.categories.length
+      span 个主题分类
+
+  if site.categories.length
+    nav.taxonomy-category-tree(aria-label='全部分类')
+      !=list_categories({ show_count: true })
+  else
+    .taxonomy-empty
+      i.fas.fa-folder-open(aria-hidden='true')
+      p 暂无主题分类。

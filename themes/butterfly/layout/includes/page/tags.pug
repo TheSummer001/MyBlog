@@ -1,2 +1,21 @@
-.tag-cloud-list.text-center
-  !=cloudTags({source: site.tags, orderby: page.orderby || 'random', order: page.order || 1, minfontsize: 1.2, maxfontsize: 1.5, limit: 0, unit: 'em'})
+section.taxonomy-hub.taxonomy-hub--tags(aria-labelledby='tag-index-title')
+  header.taxonomy-hub__header
+    .taxonomy-hub__copy
+      span.taxonomy-hub__kicker SIGNAL SPECTRUM
+      h1#tag-index-title 标签索引
+      p 用标签定位具体技术、工具与问题场景。
+    .taxonomy-hub__metric
+      strong= site.tags.length
+      span 个可检索标签
+
+  if site.tags.length
+    nav.tag-index-grid(aria-label='全部标签')
+      each item in site.tags.sort('name', 1).data
+        a.tag-index-item(class=tagTone(item.name) href=url_for(item.path))
+          span.tag-index-item__signal(aria-hidden='true')
+          span.tag-index-item__name= item.name
+          span.tag-index-item__count= item.length + ' 篇'
+  else
+    .taxonomy-empty
+      i.fas.fa-satellite-dish(aria-hidden='true')
+      p 暂无可检索标签。

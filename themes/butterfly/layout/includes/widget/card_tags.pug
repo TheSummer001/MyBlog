@@ -7,8 +7,10 @@ if theme.aside.card_tags.enable
 
       - let { limit, orderby, order } = theme.aside.card_tags
       - limit = limit === 0 ? 0 : limit || 40
-
-      if theme.aside.card_tags.color
-        .card-tag-cloud!= cloudTags({source: site.tags, orderby: orderby, order: order, minfontsize: 1.15, maxfontsize: 1.45, limit: limit, unit: 'em', page: 'index'})
-      else
-        .card-tag-cloud!= tagcloud({orderby: orderby, order: order, min_font: 1.1, max_font: 1.5, amount: limit , color: true, start_color: '#999', end_color: '#99a9bf', unit: 'em'})
+      - const orderedTags = site.tags.sort(orderby || 'name', order || 1).data
+      - const visibleTags = limit > 0 ? orderedTags.slice(0, limit) : orderedTags
+      nav.card-tag-cloud.observatory-tag-cloud(aria-label='常用标签')
+        each item in visibleTags
+          a.observatory-tag-chip(class=tagTone(item.name) href=url_for(item.path))
+            span.observatory-tag-chip__signal(aria-hidden='true')
+            span= item.name

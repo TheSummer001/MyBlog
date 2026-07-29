@@ -1,15 +1,37 @@
 mixin indexPostUI()
   - const indexLayout = theme.index_layout
   - const masonryLayoutClass = (indexLayout === 6 || indexLayout === 7) ? 'masonry' : ''
+  - const isTagArchive = globalPageType === 'tag'
+  - const isCategoryArchive = globalPageType === 'category'
+  - const isTaxonomyArchive = isTagArchive || isCategoryArchive
+  - const taxonomyName = isTagArchive ? page.tag : page.category
+  - const taxonomySource = isTagArchive ? site.tags : site.categories
+  - const taxonomyItem = isTaxonomyArchive && taxonomySource && taxonomySource.data ? taxonomySource.data.find(item => item.name === taxonomyName) : null
+  - const taxonomyCount = taxonomyItem ? taxonomyItem.length : page.posts.data.length
+  - const taxonomyRoot = isTagArchive ? '/tags/' : '/categories/'
   #recent-posts.recent-posts.nc(class=masonryLayoutClass)
-    .post-section-heading
-      .post-section-heading__copy
-        span.post-section-kicker RECENT LOGS
-        h2 最近更新
-        p 按时间持续整理的技术实践与问题复盘
-      a.post-section-heading__link(href=url_for('/archives/'))
-        span 全部文章
-        i.fas.fa-arrow-right
+    if isTaxonomyArchive
+      header.taxonomy-archive-heading
+        .taxonomy-archive-heading__copy
+          span.post-section-kicker= isTagArchive ? 'SIGNAL LABEL' : 'TOPIC CHANNEL'
+          h1
+            span= isTagArchive ? '标签：' : '分类：'
+            strong= taxonomyName
+          p
+            span.taxonomy-archive-heading__count= taxonomyCount
+            |  篇文章正在此频道中持续归档
+        a.taxonomy-archive-heading__back(href=url_for(taxonomyRoot))
+          i(class=isTagArchive ? 'fas fa-tags' : 'fas fa-folder-open')
+          span= isTagArchive ? '查看全部标签' : '查看全部分类'
+    else
+      .post-section-heading
+        .post-section-heading__copy
+          span.post-section-kicker RECENT LOGS
+          h2 最近更新
+          p 按时间持续整理的技术实践与问题复盘
+        a.post-section-heading__link(href=url_for('/archives/'))
+          span 全部文章
+          i.fas.fa-arrow-right
     .recent-post-items
       each article, index in page.posts.data
         .recent-post-item
@@ -67,15 +89,6 @@ mixin indexPostUI()
                     a(href=url_for(item.path)).article-meta__categories #[=item.name]
                     if index < article.categories.data.length - 1
                       i.fas.fa-angle-right.article-meta-link
-              if theme.post_meta.page.tags && article.tags.length > 0
-                span.article-meta.tags
-                  span.article-meta-separator |
-                  each item, index in article.tags.data
-                    i.fas.fa-tag
-                    a(href=url_for(item.path)).article-meta__tags #[=item.name]
-                    if index < article.tags.data.length - 1
-                      span.article-meta-link #[='•']
-
               mixin countBlockInIndex
                 - needLoadCountJs = true
                 span.article-meta
@@ -120,6 +133,18 @@ mixin indexPostUI()
                       a(href=url_for(link) + '#post-comment')
                         span.artalk-count(data-page-key=url_for(link))
                           i.fa-solid.fa-spinner.fa-spin
+
+            if theme.post_meta.page.tags && article.tags.length > 0
+              nav.article-tag-list(aria-label='文章标签')
+                each item in article.tags.data
+                  - const isCurrentTag = isTagArchive && page.tag === item.name
+                  a.article-tag-chip(
+                    class=[tagTone(item.name), isCurrentTag ? 'is-current' : '']
+                    href=url_for(item.path)
+                    aria-current=isCurrentTag ? 'page' : false
+                  )
+                    span.article-tag-chip__signal(aria-hidden='true')
+                    span= item.name
 
             //- Display the article introduction on homepage
             - const content = postDesc(article)

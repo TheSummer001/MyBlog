@@ -10,7 +10,7 @@ block content
       !=partial('includes/third-party/comments/index', {}, {cache: true})
 
   #page(class=noCardLayout)
-    if top_img === false && page.title
+    if top_img === false && page.title && !['tags', 'categories'].includes(page.type)
       .page-title= page.title
 
     case page.type
