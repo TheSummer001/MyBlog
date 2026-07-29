@@ -44,7 +44,7 @@ description: "TooonRan的个人简介"
 如果你对我的文章感兴趣，或者有任何问题，欢迎通过以下方式联系我：
 
 - <i class="fab fa-github"></i> Github: [TheSummer001](https://github.com/TheSummer001)
-- <i class="fas fa-envelope"></i> Email: [2026263245@qq.com](mailto:2026263245@qq.com)
+- <i class="fas fa-envelope"></i> Email: [tooonran@gmail.com](mailto:tooonran@gmail.com)
 - <i class="fab fa-qq"></i> QQ: 2026263245
 
 ---
