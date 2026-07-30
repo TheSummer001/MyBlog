@@ -13,7 +13,7 @@ keywords: ASR,LLM,Elasticsearch,事件驱动,架构设计,Java
 description: 本文探讨了分析链路中结果回写 Elasticsearch 的可靠性设计，重点解析状态流转与失败兜底机制。通过“先改状态再写结果”的策略，结合统一的写入接口与受控的异步补偿任务（筛选、分批、告警），系统能在发生异常时实现自我恢复。这一设计闭环确保了复杂架构在真实工程环境下的数据最终一致性与高可用性。
 ---
 
-> 本文是 [事件驱动的 ASR → LLM → ES 回写：设计拆解与实践](https://blog.tooonran.xyz/2026/05/08/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%9A%84%20ASR%20%E2%86%92%20LLM%20%E2%86%92%20ES%20%E5%9B%9E%E5%86%99%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%8B%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E8%B7%B5/) 系列的第三篇，重点讲解 ES 回写的状态流转与失败补偿设计。
+> 本文是 [事件驱动的 ASR → LLM → ES 回写：设计拆解与实践](https://blog.tooonran.top/2026/05/08/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%9A%84%20ASR%20%E2%86%92%20LLM%20%E2%86%92%20ES%20%E5%9B%9E%E5%86%99%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%8B%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E8%B7%B5/) 系列的第三篇，重点讲解 ES 回写的状态流转与失败补偿设计。
 
 当分析链路已经跑起来之后，最后一个关键问题就是：结果怎么可靠落到 ES 上。
 
@@ -253,4 +253,4 @@ function compensateFailures():
 - 失败记录是补偿链路的入口
 - 重试一定要受控，不能无限放大
 
-到这里，ASR、LLM 和 ES 的整条链路就基本串起来了。可以回到 [概述文章](https://blog.tooonran.xyz/2026/05/08/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%9A%84%20ASR%20%E2%86%92%20LLM%20%E2%86%92%20ES%20%E5%9B%9E%E5%86%99%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%8B%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E8%B7%B5/) 回顾整体设计思路。
+到这里，ASR、LLM 和 ES 的整条链路就基本串起来了。可以回到 [概述文章](https://blog.tooonran.top/2026/05/08/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%9A%84%20ASR%20%E2%86%92%20LLM%20%E2%86%92%20ES%20%E5%9B%9E%E5%86%99%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%8B%86%E8%A7%A3%E4%B8%8E%E5%AE%9E%E8%B7%B5/) 回顾整体设计思路。

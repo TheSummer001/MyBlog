@@ -21,12 +21,11 @@ nav:
     # false: navigation bar follows default behavior
     always_fixed: true
 
-# Reserved entry for the future TooonRan portal.
-# Set enable to true after https://tooonran.top/ is ready.
+# Link back to the TooonRan personal homepage.
 portal:
-    enable: false
-    name: TooonRan
-    url: https://tooonran.top/
+    enable: true
+    name: 个人主页
+    url: https://www.tooonran.top/
 
 menu:
     首页: / || fas fa-home
@@ -225,7 +224,7 @@ toc:
 post_copyright:
     enable: true
     decode: false
-    author_href:
+    author_href: /about/
     license: CC BY-NC-SA 4.0
     license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -1071,7 +1070,7 @@ structured_data:
     enable: true
     # Alternate name for the site, used in structured data
     # Format: ['name1', 'name2']
-    alternate_name: ["TooonRan的技术博客", "编程技术分享"]
+    alternate_name: ["TooonRan", "途然", "途然的个人博客"]
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true

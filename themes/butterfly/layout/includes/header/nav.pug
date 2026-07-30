@@ -4,17 +4,18 @@ nav#nav
       a.nav-portal-link(href=theme.portal.url title=theme.portal.name)
         span=theme.portal.name
         i.fas.fa-chevron-right
-    a.nav-site-title(href=url_for('/'))
-      if theme.nav.logo
-        img.site-icon(src=url_for(theme.nav.logo) alt='Logo')
-      if theme.nav.display_title
-        span.site-name=config.title
-    if globalPageType === 'post' && theme.nav.display_post_title
-      a.nav-page-title(href=url_for('/'))
-        span.site-name=(page.title || config.title)
-        span.site-name
-          i.fa-solid.fa-circle-arrow-left
-          span= '  ' + _p('post.back_to_home')
+    else
+      a.nav-site-title(href=url_for('/'))
+        if theme.nav.logo
+          img.site-icon(src=url_for(theme.nav.logo) alt='Logo')
+        if theme.nav.display_title
+          span.site-name=config.title
+      if globalPageType === 'post' && theme.nav.display_post_title
+        a.nav-page-title(href=url_for('/'))
+          span.site-name=(page.title || config.title)
+          span.site-name
+            i.fa-solid.fa-circle-arrow-left
+            span= '  ' + _p('post.back_to_home')
 
   #menus
     if theme.darkmode.enable && theme.darkmode.button

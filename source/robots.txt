@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
 
-# 主域名 sitemap
-Sitemap: https://blog.tooonran.xyz/sitemap.xml
-# 备用域名 sitemap（门户首页）
-Sitemap: https://tooonran.xyz/sitemap.xml
+# Blog sitemap
+Sitemap: https://blog.tooonran.top/sitemap.xml

@@ -1,55 +1,52 @@
 ---
-title: 关于我
+title: 关于 TooonRan
 date: 2025-12-18 10:00:00
-updated: 2025-12-18 10:00:00
+updated: 2026-07-29 12:00:00
 type: "about"
 comments: true
-description: "TooonRan的个人简介"
+keywords: TooonRan, 途然, 后端开发, AI, 个人博客
+description: "了解 TooonRan、当前关注的技术方向，以及这个博客的内容范围与写作原则。"
 ---
 
-👋 **Hello! 我是 TooonRan**。
-一名热爱技术、喜欢折腾的开发者。这里是我的数字花园，记录学习笔记，分享技术心得，也吐槽生活琐事。
+你好，我是 **TooonRan**，也可以叫我途然。我是一名后端开发工程师，也是这个博客的作者与维护者。
 
----
+这里主要记录我在真实项目中遇到的问题、做过的设计和验证过的实现。我希望每篇文章不只给出结论，也尽量交代问题出现的条件、排查过程、方案取舍与适用边界。
 
-### 🛠️ 技术栈 | Tech Stack
+## 我在关注什么
 
-我目前正在使用或学习的技术：
+目前持续关注的方向包括：
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot">
-  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue.js">
-  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Hexo-0E83CD?style=for-the-badge&logo=hexo&logoColor=white" alt="Hexo">
-</div>
+- Java、Spring Boot 与后端工程实践
+- Go、云原生与边缘计算
+- AI 应用、RAG 与事件驱动的数据链路
+- Elasticsearch、Redis、MySQL 等数据基础设施
+- 线上问题排查、系统设计与开发工具
 
----
+这些方向会随着实际工作和学习逐步变化，博客内容也会持续更新。
 
-### 🎮 爱好 | Hobbies
+## 这个博客写什么
 
-除了敲代码，我也喜欢：
+文章大致分为三类：
 
-- 📷 **摄影**: 记录生活中的美好瞬间
-- 🎮 **游戏**: 偶尔打打单机大作
-- 📚 **阅读**: 科技、科幻、历史类小说
-- 🎵 **音乐**: 很多种类都听
+- **问题排查**：记录故障现象、定位路径、根因和修复方式。
+- **设计实践**：拆解系统方案、技术取舍与实现边界。
+- **学习整理**：把零散知识整理成可以复查和复用的笔记。
 
----
+我会尽量区分已经验证的事实、个人经验和仍需继续观察的判断。如果文章存在错误或后来有更好的方案，也会通过更新内容进行修正。
 
-### 📮 联系我 | Contact
+## 主页与博客
 
-如果你对我的文章感兴趣，或者有任何问题，欢迎通过以下方式联系我：
+我的[个人主页](https://www.tooonran.top/)用于集中展示个人信息、近期动态与站点入口；当前这个[个人博客](https://blog.tooonran.top/)则专注于承载完整文章和长期技术记录。
 
-- <i class="fab fa-github"></i> Github: [TheSummer001](https://github.com/TheSummer001)
-- <i class="fas fa-envelope"></i> Email: [tooonran@gmail.com](mailto:tooonran@gmail.com)
-- <i class="fab fa-qq"></i> QQ: 2026263245
+除非文章另有明确署名，本站内容均由 **TooonRan** 创作和维护。
 
----
+## 生活之外
 
-<div style="text-align: center; color: #999;">
-  感谢你的来访，祝你今天过得愉快！ <br>
-  <i class="fas fa-heart" style="color: #ff5050; animation: heartbeat 1.3s infinite;"></i>
-</div>
+技术之外，我也喜欢摄影、游戏、阅读和音乐。它们不会成为博客的主要内容，但会影响我观察和记录世界的方式。
+
+## 联系我
+
+如果你想讨论文章中的问题、指出错误或交流技术，可以通过以下方式联系：
+
+- GitHub：[TheSummer001](https://github.com/TheSummer001)
+- Email：[tooonran@gmail.com](mailto:tooonran@gmail.com)

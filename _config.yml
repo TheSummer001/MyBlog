@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: TooonRan's Blog
+title: TooonRan 的个人博客
 subtitle: Tech & Life
-description: "TooonRan的个人博客，分享编程技术、Hexo搭建教程、生活随笔以及效率工具心得。"
-keywords: TooonRan, Hexo, 博客, 编程, 技术, 生活
+description: "TooonRan 的个人博客，记录后端开发、AI 应用、工程实践与真实问题排查。"
+keywords: TooonRan, 途然, 个人博客, 后端开发, AI, 编程, 工程实践
 author: TooonRan
 language: zh-CN
 timezone: "Asia/Shanghai"
@@ -14,12 +14,6 @@ timezone: "Asia/Shanghai"
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.tooonran.top
-# 添加备用域名（用于生成正确的 canonical URL）
-# 主域名
-canonical_url: https://blog.tooonran.top
-# 备用域名（会重定向到主域名）
-alternate_urls:
-  - https://blog.tooonran.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

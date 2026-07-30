@@ -33,13 +33,13 @@ description: "TooonRan 的个人博客友链目录"
       <img src=" /img/favicon.svg" alt="" aria-hidden="true">
       <div>
         <p class="friends-section-label">本站友链信息</p>
-        <h3>TooonRan's Blog</h3>
+        <h3>TooonRan 的个人博客</h3>
       </div>
     </div>
-    <pre id="friends-site-copy" class="friends-site-copy" tabindex="0">名称：TooonRan's Blog
+    <pre id="friends-site-copy" class="friends-site-copy" tabindex="0">名称：TooonRan 的个人博客
 链接：https://blog.tooonran.top/
 头像：https://blog.tooonran.top/img/favicon.svg
-简介：记录编程实践、AI 探索与真实问题排查的个人技术博客。</pre>
+简介：记录编程实践、AI 探索与真实问题排查的个人博客。</pre>
     <div class="friends-copy-row">
       <button class="friends-copy-action" type="button" data-friends-copy aria-describedby="friends-copy-status">
         <i class="fas fa-copy" aria-hidden="true"></i>
