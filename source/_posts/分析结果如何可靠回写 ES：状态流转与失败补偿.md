@@ -1,15 +1,15 @@
 ---
 title: 分析结果如何可靠回写 ES：状态流转与失败补偿
 date: 2026-05-08 10:00:00
+updated: 2026-05-08 10:00:00
 categories:
-  - 架构设计
+  - AI 工程
 tags:
   - Elasticsearch
-  - 状态流转
-  - 失败补偿
   - 事件驱动
+  - 智能分析链路
   - Java
-keywords: ASR,LLM,Elasticsearch,事件驱动,架构设计,Java
+keywords: Elasticsearch,状态流转,失败补偿,事件驱动,最终一致性,Java
 description: 本文探讨了分析链路中结果回写 Elasticsearch 的可靠性设计，重点解析状态流转与失败兜底机制。通过“先改状态再写结果”的策略，结合统一的写入接口与受控的异步补偿任务（筛选、分批、告警），系统能在发生异常时实现自我恢复。这一设计闭环确保了复杂架构在真实工程环境下的数据最终一致性与高可用性。
 ---
 

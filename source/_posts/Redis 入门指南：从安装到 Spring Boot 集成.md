@@ -4,13 +4,10 @@ date: 2025-12-26 19:45:00
 updated: 2025-12-26 19:45:00
 tags:
   - Redis
-  - NoSQL
   - Java
-  - Spring Boot
 categories:
-  - 数据库
-  - 后端技术
-keywords: Redis, docker, Spring Data Redis, Jedis
+  - 后端工程
+keywords: Redis,NoSQL,Java,Spring Boot,Docker,Spring Data Redis,Jedis
 description: Redis 基础概念、Docker 安装教程、常用命令详解以及 Jedis 和 Spring Data Redis 的集成实战。
 ---
 

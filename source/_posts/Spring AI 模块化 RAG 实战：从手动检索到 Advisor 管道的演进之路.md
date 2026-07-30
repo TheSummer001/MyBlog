@@ -3,15 +3,13 @@ title: "Spring AI 模块化 RAG 实战：从手动检索到 Advisor 管道的演
 date: 2026-05-14 20:00:00
 updated: 2026-05-14 20:00:00
 tags:
-  - SpringAIAlibaba
+  - Spring AI Alibaba
   - RAG
   - Elasticsearch
   - Redis
-  - Java
 categories:
-  - 后端开发
-  - AI
-keywords: Spring AI,RAG,Elasticsearch,混合检索,向量检索,对话记忆,查询重写,Advisor
+  - AI 工程
+keywords: Spring AI,Spring AI Alibaba,RAG,Elasticsearch,Redis,混合检索,向量检索,对话记忆,查询重写,Advisor
 description: 记录 IntelliRAG 项目从手动构建 RAG 流程到全面采用 Spring AI 模块化 Advisor 架构的演进过程，涵盖混合检索、对话记忆、查询重写等核心模块的实现与踩坑经验。
 ---
 

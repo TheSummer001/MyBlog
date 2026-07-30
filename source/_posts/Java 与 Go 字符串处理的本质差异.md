@@ -1,14 +1,13 @@
 ---
 title: 深度解析：Java 与 Go 字符串处理的本质差异
 date: 2026-04-20 10:30:00
+updated: 2026-04-20 10:30:00
 tags:
   - Go
   - Java
-  - UTF-8
-  - Unicode
 categories:
-  - 思考
-keywords: Java, Golang, String
+  - 后端工程
+keywords: Java,Go,String,UTF-8,UTF-16,Unicode,字符串
 description: 深度对比 Go 与 Java 的字符串底层机制。通过剖析 UTF-8 的字节序列与 UTF-16 的代码单元差异，揭示 Go 的“明确优于隐式”与 Java“抽象优于细节”的设计哲学，并提供实战开发中的最佳实践。
 ---
 

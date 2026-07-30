@@ -5,10 +5,10 @@ updated: 2026-01-28 18:16:26
 tags:
   - KubeEdge
   - Go
+  - 计算机视觉
 categories:
-  - 后端技术
-  - 云原生
-keywords: Golang, KubeEdge, Kubenetes
+  - 后端工程
+keywords: Go,KubeEdge,Kubernetes,GoCV,OpenCV,Camera Mapper
 description: 本文档记录了基于 KubeEdge 官方 `mapper-framework` 脚手架生成 Camera Mapper，并适配 GoCV (OpenCV) 进行视频流采集与推流的完整流程。
 ---
 

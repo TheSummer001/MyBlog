@@ -1,14 +1,14 @@
 ---
 title: 排查 MyBatis 分页查询出现完全重复记录的问题
 date: 2026-04-29 15:40:00
+updated: 2026-04-29 15:40:00
 tags:
   - MyBatis
-  - SQL
+  - Java
   - 问题排查
-  - PostgreSQL
 categories:
-  - 后端开发
-  - 踩坑记录
+  - 后端工程
+keywords: MyBatis,Java,PostgreSQL,SQL,分页,重复数据,笛卡尔积
 description: 记录了一次 MyBatis 分页查询返回重复数据的排查与修复过程。分析由缺失逻辑删除过滤引发的笛卡尔积问题，以及排序字段不稳定带来的分页隐患，并给出了完善状态校验、应用层去重及稳定排序规则的完整解决方案
 ---
 

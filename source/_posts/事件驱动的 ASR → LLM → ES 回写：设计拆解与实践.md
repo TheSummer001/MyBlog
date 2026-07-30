@@ -1,14 +1,14 @@
 ---
 title: 事件驱动的 ASR → LLM → ES 回写：设计拆解与实践
 date: 2026-05-08 10:00:00
+updated: 2026-05-08 10:00:00
 categories:
-  - 架构设计
+  - AI 工程
 tags:
   - ASR
   - LLM
-  - Elasticsearch
   - 事件驱动
-  - Java
+  - 智能分析链路
 keywords: ASR,LLM,Elasticsearch,事件驱动,架构设计,Java
 description: 本文分析如何把语音转写、大模型分析和搜索索引通过事件驱动的方式解耦并可靠地同步回写，重点讲解设计思想、实现模式与工程建议。
 ---

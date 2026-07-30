@@ -6,9 +6,8 @@ tags:
   - MySQL
   - Elasticsearch
 categories:
-  - 后端技术
-  - 数据库
-keywords: MySQL,Elasticsearch,Canal
+  - 后端工程
+keywords: MySQL,Elasticsearch,Canal,数据同步,binlog
 description: 记录 Canal 1.1.8 部署实战：如何配置 deployer 和 adapter，实现 MySQL 到 ES 的数据实时同步，内附完整踩坑与解决记录。
 ---
 

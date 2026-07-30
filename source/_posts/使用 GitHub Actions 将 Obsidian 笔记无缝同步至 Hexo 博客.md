@@ -1,13 +1,13 @@
 ---
 title: 极客工作流：使用 GitHub Actions 将 Obsidian 笔记无缝同步至 Hexo 博客
 date: 2026-04-30 15:35:00
+updated: 2026-04-30 15:35:00
 tags:
-  - Obsidian
   - Hexo
-  - 效率工具
-  - 博客搭建
 categories:
-  - 个人知识管理
+  - 工具与效率
+keywords: Obsidian,Hexo,GitHub Actions,Markdown,自动同步,博客工作流
+description: 介绍如何使用 GitHub Actions 将 Obsidian 中的 Markdown 笔记自动同步到 Hexo 博客，构建低摩擦、可持续的内容发布工作流。
 ---
 一直以来，我的个人知识管理和博客输出是割裂的。我在私密的纯 Markdown 仓库（配合 Obsidian）里记录日常和技术踩坑，但如果想发布一篇博客，就需要手动把文档复制到 Hexo 仓库的 `source/_posts` 目录下，再走一遍部署流程。
 

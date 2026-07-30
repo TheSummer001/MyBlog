@@ -1,14 +1,14 @@
 ---
 title: 记一次线上 ElasticSearch多条件查询失效问题的排查过程
 date: 2026-04-23 16:30:00
+updated: 2026-04-23 16:30:00
 tags:
   - Elasticsearch
   - Java
   - 问题排查
 categories:
-  - 后端技术
-  - 踩坑记录
-keywords: Java, ElasticSearch
+  - 后端工程
+keywords: Java,Elasticsearch,多条件查询,Mapping,分词,问题排查
 description: 记述一次线上 Elasticsearch 多条件查询失效的“幽灵 Bug”排查过程。深度剖析由查询路由开关与底层分词 Mapping 差异引发的联动故障，分享实战排查思路与多环境避坑经验。
 ---
 
