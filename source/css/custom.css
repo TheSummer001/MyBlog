@@ -90,6 +90,19 @@
    顶部导航栏布局修改：菜单居中 + 搜索靠右
    ================================== */
 
+/* 右键菜单默认隐藏，由桌面端脚本在触发时显式打开。 */
+#rightMenu {
+  display: none;
+}
+
+/* 触屏窄屏设备始终使用浏览器原生长按菜单。 */
+@media screen and (max-width: 767px) {
+  #rightMenu,
+  .rmMask {
+    display: none !important;
+  }
+}
+
 /* 仅在电脑端生效 (宽度大于768px)，避免破坏手机端样式 */
 @media screen and (min-width: 768px) {
     

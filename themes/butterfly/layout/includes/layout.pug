@@ -39,7 +39,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
     !=partial('includes/sidebar', {}, {cache: true})
 
-    #body-wrap(class=pageType)
+    #body-wrap(class=[pageType, 'page-type-' + globalPageType])
       include ./header/index.pug
 
       main#content-inner.layout(class=hideAside)

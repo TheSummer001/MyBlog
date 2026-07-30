@@ -1027,6 +1027,21 @@ button:focus-visible,
     padding-top: 12px !important;
   }
 
+  #body-wrap:is(.page-type-home, .page-type-archive, .page-type-tag, .page-type-category) #page-header.always-fixed #nav {
+    top: 8px !important;
+    height: 48px !important;
+    padding: 0 10px 0 14px !important;
+    border-radius: 15px;
+  }
+
+  #body-wrap:is(.page-type-home, .page-type-archive, .page-type-tag, .page-type-category) #nav-darkmode-toggle,
+  #body-wrap:is(.page-type-home, .page-type-archive, .page-type-tag, .page-type-category) #search-button .search {
+    width: 34px !important;
+    min-width: 34px;
+    height: 34px !important;
+    border-radius: 10px !important;
+  }
+
   #content-inner.layout {
     width: calc(100% - 18px);
   }
@@ -1079,25 +1094,156 @@ button:focus-visible,
     display: none;
   }
 
+  .post-section-heading {
+    margin: 2px 2px 10px;
+    padding: 0 2px;
+  }
+
+  .post-section-kicker {
+    margin-bottom: 1px;
+    font-size: 0.58rem;
+    letter-spacing: 0.11em;
+  }
+
+  .post-section-heading h2 {
+    font-size: 1.22rem;
+    line-height: 1.25;
+  }
+
+  .post-section-heading__link {
+    padding-bottom: 1px;
+    font-size: 0.72rem;
+  }
+
+  .post-section-heading__link i {
+    margin-left: 6px;
+  }
+
   #recent-posts > .recent-post-items .recent-post-item {
     min-height: 0;
+    align-items: stretch;
     flex-direction: column;
   }
 
   #recent-posts .recent-post-item > .post_cover {
     width: 100%;
     min-width: 0;
-    height: 164px;
-    min-height: 164px;
+    height: 116px !important;
+    min-height: 116px;
+    flex: 0 0 116px;
+    align-self: auto;
   }
 
   #recent-posts .recent-post-info {
     width: 100% !important;
-    padding: 20px !important;
+    min-height: 0;
+    height: auto;
+    padding: 16px 16px 18px !important;
+    flex: none;
+    align-self: stretch;
+    justify-content: flex-start;
   }
 
   #recent-posts .article-title {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
     font-size: 1rem !important;
+    line-height: 1.42;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  #recent-posts .article-meta-wrap {
+    display: block;
+    overflow: hidden;
+    margin: 7px 0 9px;
+    font-size: 0.64rem;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #recent-posts .article-meta-wrap .article-meta-label,
+  #recent-posts .article-meta-wrap i:not(.fa-spinner):not(.article-meta-link) {
+    display: none;
+  }
+
+  #recent-posts .article-meta-wrap .article-meta-separator {
+    margin: 0 5px;
+    font-size: 0;
+  }
+
+  #recent-posts .article-meta-wrap .article-meta-separator::before {
+    content: "·";
+    font-size: 0.64rem;
+  }
+
+  #recent-posts .article-meta-wrap .article-meta-link {
+    display: inline;
+    margin: 0 4px;
+    font-size: 0;
+  }
+
+  #recent-posts .article-meta-wrap .article-meta-link::before {
+    content: "/";
+    font-size: 0.64rem;
+  }
+
+  #recent-posts .article-tag-list {
+    gap: 6px;
+    margin: 0 0 9px;
+  }
+
+  #recent-posts .article-tag-chip {
+    min-height: 25px;
+    padding: 3px 8px;
+    font-size: 0.62rem;
+  }
+
+  #recent-posts .article-tag-chip:nth-of-type(n + 4) {
+    display: none;
+  }
+
+  #recent-posts .article-tag-overflow {
+    display: inline-flex;
+    min-height: 25px;
+    align-items: center;
+    padding: 3px 8px;
+    border: 1px solid var(--obs-line);
+    border-radius: 999px;
+    background: var(--obs-surface-muted);
+    color: var(--obs-ink-soft);
+    font-family: "Cascadia Code", "JetBrains Mono", monospace;
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  #recent-posts .content {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.65;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  #recent-posts .tech-cover a {
+    gap: 12px;
+    flex-direction: row;
+  }
+
+  #recent-posts .tech-cover i {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  #recent-posts .tech-cover span {
+    max-width: 62%;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -1230,6 +1376,10 @@ button:focus-visible,
   flex-wrap: wrap;
   gap: 7px;
   margin: -1px 0 11px;
+}
+
+.article-tag-overflow {
+  display: none;
 }
 
 .article-tag-chip,

@@ -145,6 +145,10 @@ mixin indexPostUI()
                   )
                     span.article-tag-chip__signal(aria-hidden='true')
                     span= item.name
+                if article.tags.data.length > 3
+                  span.article-tag-overflow(
+                    aria-label=`另有 ${article.tags.data.length - 3} 个标签`
+                  )= `+${article.tags.data.length - 3}`
 
             //- Display the article introduction on homepage
             - const content = postDesc(article)

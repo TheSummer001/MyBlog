@@ -195,7 +195,9 @@ function popupMenu() {
         rmf.showRightMenu(false);
     });
 }
-if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+const isTouchOnlyDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+const isMobileDevice = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+if (!isMobileDevice && !isTouchOnlyDevice) {
     popupMenu()
 }
 const box = document.documentElement
