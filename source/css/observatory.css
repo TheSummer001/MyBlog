@@ -1023,6 +1023,12 @@ button:focus-visible,
     padding: 0 0 0 2px;
   }
 
+  html.mobile-sidebar-open #page-header.always-fixed #nav {
+    visibility: hidden;
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
   #page-header.always-fixed + #content-inner {
     padding-top: 12px !important;
   }

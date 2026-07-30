@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
       btf.overflowPaddingR.add()
       btf.animateIn(document.getElementById('menu-mask'), 'to_show 0.5s')
       document.getElementById('sidebar-menus').classList.add('open')
+      document.documentElement.classList.add('mobile-sidebar-open')
       mobileSidebarOpen = true
     },
     close: () => {
       btf.overflowPaddingR.remove()
       btf.animateOut(document.getElementById('menu-mask'), 'to_hide 0.5s')
       document.getElementById('sidebar-menus').classList.remove('open')
+      document.documentElement.classList.remove('mobile-sidebar-open')
       mobileSidebarOpen = false
     }
   }
