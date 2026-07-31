@@ -11,6 +11,7 @@ _multiconfig.yml
 .vscode/
 .idea/
 CLAUDE.md
+.codex/
 
 # Backup files
 *.bak
