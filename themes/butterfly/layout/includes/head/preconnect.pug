@@ -1,5 +1,5 @@
 -
-  const { internal_provider, third_party_provider, custom_format } = theme.CDN
+  const { internal_provider, custom_format } = theme.CDN
   const providers = {
     'jsdelivr': '//cdn.jsdelivr.net',
     'cdnjs': '//cdnjs.cloudflare.com',
@@ -8,13 +8,8 @@
   }
 -
 
-if internal_provider === third_party_provider && internal_provider !== 'local'
+if internal_provider !== 'local'
   link(rel="preconnect" href=providers[internal_provider])
-else
-  if internal_provider !== 'local'
-    link(rel="preconnect" href=providers[internal_provider])
-  if third_party_provider !== 'local'
-  link(rel="preconnect" href=providers[third_party_provider])
 
 if theme.google_analytics
   link(rel="preconnect" href="//www.google-analytics.com" crossorigin='')

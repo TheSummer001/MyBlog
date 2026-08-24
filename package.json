@@ -6,19 +6,18 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "test:assets": "node --test test/article-assets.test.js"
   },
   "hexo": {
     "version": "8.1.2"
   },
   "dependencies": {
     "hexo": "^8.1.2",
-    "hexo-asset-image": "github:CodeFalling/hexo-asset-image",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^4.0.0",
     "hexo-generator-index": "^4.0.0",
-    "hexo-generator-search": "^2.4.3",
     "hexo-generator-searchdb": "^1.5.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",

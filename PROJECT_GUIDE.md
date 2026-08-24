@@ -7,7 +7,7 @@ This tracked file is the neutral, cross-machine owner for the repository's share
 - This is a Hexo 8 + Butterfly technical blog. Site configuration lives in `_config.yml`; Butterfly overrides live in `_config.butterfly.yml`.
 - Posts live in `source/_posts/`, standalone pages in `source/about/`, `source/categories/`, and `source/tags/`.
 - Custom CSS, JavaScript, and images live in `source/css/`, `source/js/`, and `source/img/`. Theme templates live in `themes/butterfly/layout/`.
-- `post_asset_folder` is enabled. A post's private images belong beside the post, for example `source/_posts/My Post/image.png`.
+- `post_asset_folder` is disabled. Article-owned resources live below an `assets/<post filename>/` directory beside the Markdown file. For example, `source/_posts/Java/docker.md` references `source/_posts/Java/assets/docker/diagram.png` as `assets/docker/diagram.png`. The project-local Hexo resource adapter validates and publishes these paths; do not use the legacy same-name post folder convention.
 
 ## Owner selection
 
@@ -67,7 +67,7 @@ Issue: <symptom>; viewport/theme mode: <scope>; rework scope: <file or behavior>
 
 Until explicit author confirmation is received, keep the status as `待作者验证 (Pending author verification)`. Do not treat `git diff --check`, a successful build, agent self-review, or the handoff itself as author acceptance. Before the author's confirmation, do not claim that the visual issue has been accepted or visually verified. When replying to the author, report implementation/build status separately from visual acceptance status.
 
-Keep the bright AI-anime technical observatory direction: professional, restrained, airy blue-white hierarchy with limited amber emphasis; avoid generic templates, excessive neon, and cheap glassmorphism. The homepage Hero should express current technical focus rather than repeat the bio. Keep `https://tooonran.top/` as the global entry configuration, but leave `portal.enable: false` until the homepage launch; the primary blog domain is `https://blog.tooonran.top/` and `.xyz` is only a fallback.
+Keep the bright AI-anime technical observatory direction: professional, restrained, airy blue-white hierarchy with limited amber emphasis; avoid generic templates, excessive neon, and cheap glassmorphism. The homepage Hero should express current technical focus rather than repeat the bio. The canonical blog URL is `https://www.tooonran.top/`, and `portal.enable` remains enabled. Other hostnames should permanently redirect to the canonical `www` hostname at the hosting or DNS layer.
 
 ## Delivery boundary
 

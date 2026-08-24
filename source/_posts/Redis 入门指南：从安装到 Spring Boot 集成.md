@@ -11,11 +11,11 @@ keywords: Redis,NoSQL,Java,Spring Boot,Docker,Spring Data Redis,Jedis
 description: Redis 基础概念、Docker 安装教程、常用命令详解以及 Jedis 和 Spring Data Redis 的集成实战。
 ---
 
-# Redis 入门
+## Redis 入门
 
 Redis 是一种 **[NoSQL](https://blog.csdn.net/zhizhengguan/article/details/120608187)**（Not Only SQL）数据库。
 
-![](Redis%20入门指南：从安装到%20Spring%20Boot%20集成/file-20251226190528309.png)
+![](assets/Redis%20入门指南：从安装到%20Spring%20Boot%20集成/file-20251226190528309.png)
 
 ### 核心特征
 

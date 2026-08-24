@@ -1,68 +1,68 @@
 #rightMenu.js-pjax
     .rightMenu-group.rightMenu-small
-        a.rightMenu-item(href="javascript:window.history.back();")
+        button.rightMenu-item(type="button" data-rmf-action="historyBack" aria-label="后退")
             i.fa.fa-arrow-left
-        a.rightMenu-item(href="javascript:window.history.forward();")
+        button.rightMenu-item(type="button" data-rmf-action="historyForward" aria-label="前进")
             i.fa.fa-arrow-right
-        a.rightMenu-item(href="javascript:window.location.reload();")
+        button.rightMenu-item(type="button" data-rmf-action="reload" aria-label="刷新")
             i.fa.fa-refresh
-        a.rightMenu-item(href="javascript:rmf.scrollToTop();")
+        button.rightMenu-item(type="button" data-rmf-action="scrollToTop" aria-label="回到顶部")
             i.fa.fa-arrow-up
     .rightMenu-group.rightMenu-line.hide#menu-text
-        a.rightMenu-item(href="javascript:rmf.copySelect();")
+        button.rightMenu-item(type="button" data-rmf-action="copySelect")
             i.fa.fa-copy
             span='复制'
-        a.rightMenu-item(href="javascript:window.open(\"https://www.baidu.com/s?wd=\"+window.getSelection().toString());window.location.reload();")
+        button.rightMenu-item(type="button" data-rmf-action="searchSelection")
             i.fa.fa-search
             span='百度搜索'
-    .rightMenu-group.rightMenu-line.hide#menu-too
-        a.rightMenu-item(href="javascript:window.open(window.getSelection().toString());window.location.reload();")
+    .rightMenu-group.rightMenu-line.hide#menu-selection-link
+        button.rightMenu-item(type="button" data-rmf-action="openSelection")
             i.fa.fa-link
             span='转到链接'
     .rightMenu-group.rightMenu-line.hide#menu-paste
-        a.rightMenu-item(href='javascript:rmf.paste()')
+        button.rightMenu-item(type="button" data-rmf-action="paste")
             i.fa.fa-copy
             span='粘贴'
     .rightMenu-group.rightMenu-line.hide#menu-post
         a.rightMenu-item(href="#post-comment")
             i.fas.fa-comment
             span='空降评论'
-        a.rightMenu-item(href="javascript:rmf.copyWordsLink()")
+        button.rightMenu-item(type="button" data-rmf-action="copyWordsLink")
             i.fa.fa-link
             span='复制本文地址'
     .rightMenu-group.rightMenu-line.hide#menu-to
-        a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
+        button.rightMenu-item(type="button" data-rmf-action="openWithNewTab")
             i.fa.fa-window-restore
             span='新窗口打开'
-        a.rightMenu-item#menu-too(href="javascript:rmf.open()")
+        button.rightMenu-item(type="button" data-rmf-action="open")
             i.fa.fa-link
             span='转到链接'
-        a.rightMenu-item(href="javascript:rmf.copyLink()")
+        button.rightMenu-item(type="button" data-rmf-action="copyLink")
             i.fa.fa-copy
             span='复制链接'
     .rightMenu-group.rightMenu-line.hide#menu-img
-        a.rightMenu-item(href="javascript:rmf.saveAs()")
+        button.rightMenu-item(type="button" data-rmf-action="saveAs")
             i.fa.fa-download
             span='保存图片'
-        a.rightMenu-item(href="javascript:rmf.openWithNewTab()")
+        button.rightMenu-item(type="button" data-rmf-action="openWithNewTab")
             i.fa.fa-window-restore
             span='在新窗口打开'
-        a.rightMenu-item(href="javascript:rmf.copyLink()")
+        button.rightMenu-item(type="button" data-rmf-action="copyLink")
             i.fa.fa-copy
             span='复制图片链接'
     .rightMenu-group.rightMenu-line
         a.rightMenu-item(href="/")
             i.fa.fa-home
             span='回到首页'
-        a.rightMenu-item(href="javascript:document.getElementById('darkmode').click();")
+        button.rightMenu-item(type="button" data-rmf-action="toggleTheme")
             i.fa.fa-moon
             span='昼夜切换'
-        a.rightMenu-item(href="javascript:changeMouseMode();")
+        button.rightMenu-item(type="button" data-rmf-action="changeMouseMode")
             i.fa.fa-mouse
             span='系统右键'
-        a.rightMenu-item(href="javascript:rmf.fullScreen();")
+        button.rightMenu-item(type="button" data-rmf-action="fullScreen")
             i.fas.fa-expand
             span='切换全屏'
-        a.rightMenu-item(href="javascript:window.print();")
+        button.rightMenu-item(type="button" data-rmf-action="print")
             i.fa-solid.fa-print
             span='打印页面'

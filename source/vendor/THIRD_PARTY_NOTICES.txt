@@ -1,0 +1,18 @@
+Third-party frontend assets
+===========================
+
+These files are vendored from the exact package versions used by Butterfly 5.5.3.
+They are served locally to keep the rendered site usable when a public CDN is unavailable.
+
+- @fortawesome/fontawesome-free 7.1.0
+  Source: https://www.npmjs.com/package/@fortawesome/fontawesome-free/v/7.1.0
+  License: CC-BY-4.0 AND OFL-1.1 AND MIT (see fontawesome/LICENSE.txt)
+- node-snackbar 0.1.16
+  Source: https://www.npmjs.com/package/node-snackbar/v/0.1.16
+  License: MIT (see snackbar/LICENSE)
+- @egjs/infinitegrid 4.12.0
+  Source: https://www.npmjs.com/package/@egjs/infinitegrid/v/4.12.0
+  License: MIT (see infinitegrid/LICENSE)
+- butterfly-extsrc 1.1.6 (Share.js files only)
+  Source: https://www.npmjs.com/package/butterfly-extsrc/v/1.1.6
+  License: Apache-2.0 (see sharejs/LICENSE)

@@ -62,16 +62,16 @@ FLUSH PRIVILEGES;
 
 1. canal下载地址[Releases · alibaba/canal](https://github.com/alibaba/canal/releases)，canal.deployer 和 canal.adapter 都需要下载
 
-![image-20250723182321075](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723182321075.png)
+![image-20250723182321075](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723182321075.png)
 
 2. 将下载的压缩包解压到目录，
 
 进入canal.deployer-1.1.8\conf\example，打开instance.properties，修改数据库相关配置信息
 
-![image-20250723183009285](./assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723183009285.png)
+![image-20250723183009285](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723183009285.png)
 3. 在\canal.deployer-1.1.8\bin目录下，输入cmd打开命令提示符
 
-![image-20250723184435306](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723184435306.png)
+![image-20250723184435306](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723184435306.png)
 4. 在 cmd 中输入 startup.bat 启动canal-deployer
 
    注意：一定要在bin目录下执行startup.bat，否则会报错无法创建日志文件
@@ -80,17 +80,17 @@ FLUSH PRIVILEGES;
 
 1. 解压文件并进入canal.adapter-1.1.8\conf\bootstrap.yml，将其中的内容全部注释掉，否则提示XX表找不到
 
-![image-20250723185601022](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723185601022.png)
+![image-20250723185601022](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723185601022.png)
 2. 再修改canal.adapter-1.1.8\conf\的 application.yml文件，
 
    canal.properties 是 canal.deployer-1.1.8\conf下的文件
 
-![image-20250723185720624](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723185720624.png)
+![image-20250723185720624](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723185720624.png)
 这里的坑，一般是MySQL的账号密码不对，或者给的es链接没有``“http://”``前缀
 
 3. 修改在application.yml中配置的数据源 es7 文件夹的内容，es监听哪个表，创建对应的tablename.yml,并且加入对应的sql映射
 
-![image-20250723190557215](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723190557215.png)
+![image-20250723190557215](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723190557215.png)
 
 ```yml
 dataSourcekey：defaultDS #源数据源的key，对应上面配置的srcDataSources中的值
@@ -112,7 +112,7 @@ commitBatch：1   #提交批大小,每次都进行同步
 
    将CLASSPATH分号隔开的部分前后交换位置
 
-   ![image-20250723191153226](assets/基于Canal的MySQL与ElasticSearch数据同步/image-20250723191153226.png)
+   ![image-20250723191153226](assets/基于%20Canal%20的MySQL与ElasticSearch数据同步/image-20250723191153226.png)
 
 6. 在\canal.adapter-1.1.8\bin目录下，输入cmd打开命令提示符，在 cmd 中输入 startup.bat 启动 canal-adapter
 

@@ -79,7 +79,7 @@ case source
           })
           .catch(err => {
             console.error('Failed to get the Yiyan API:', err)
-            typedJSFn.processSubtitle(!{JSON.stringify(subContent.length)})
+            typedJSFn.processSubtitle(!{JSON.stringify(subContent)})
           })
       }
       typedJSFn.run(subtitleType)
@@ -99,7 +99,7 @@ case source
           })
           .catch(err => {
             console.error('Failed to get the Jinrishici API:', err)
-            typedJSFn.processSubtitle(!{JSON.stringify(subContent.length)})
+            typedJSFn.processSubtitle(!{JSON.stringify(subContent)})
           })
       }
       typedJSFn.run(subtitleType)

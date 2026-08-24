@@ -98,7 +98,7 @@ hexo.extend.helper.register('inject_head_js', function () {
               const isNight = hour <= ${start} || hour >= ${end}
               isNight ? activateDarkMode() : activateLightMode()
             }
-            mediaQueryDark.addEventListener('change', () => {
+            mediaQueryDark.addEventListener('change', e => {
               if (saveToLocal.get('theme') === undefined) {
                 e.matches ? activateDarkMode() : activateLightMode()
               }

@@ -35,9 +35,9 @@ mixin rightsideItem(array)
           i.fas.fa-mouse
 
 - const { enable, hide, show } = theme.rightside_item_order
-- const hideArray = enable && hide ? hide.split(',') : ['readmode','translate','darkmode','hideAside','mouse']
-- const showArray = enable && show ? show.split(',') : ['toc','chat','comment']
-- const needCogBtn = (enable && hide) || (!enable && ((globalPageType === 'post' && (readmode || translate.enable || (darkmode.enable && darkmode.button))) || (translate.enable || (darkmode.enable && darkmode.button))))
+- const hideArray = enable ? (hide ? hide.split(',') : []) : ['readmode','translate','darkmode','hideAside','mouse']
+- const showArray = enable ? (show ? show.split(',') : []) : ['toc','chat','comment']
+- const needCogBtn = enable ? hideArray.length > 0 : ((globalPageType === 'post' && (readmode || translate.enable || (darkmode.enable && darkmode.button))) || translate.enable || (darkmode.enable && darkmode.button))
 
 #rightside
   #rightside-config-hide

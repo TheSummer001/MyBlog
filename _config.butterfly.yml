@@ -72,7 +72,7 @@ social:
 favicon: /img/favicon.svg
 
 avatar:
-    img: /img/avatar.jpg
+    img: /img/avatar.webp
     effect: false
 
 # Disable all banner images
@@ -127,9 +127,9 @@ error_img:
 
 # A simple 404 page
 error_404:
-    enable: false
-    subtitle: "Page Not Found"
-    background: /img/error-page.png
+    enable: true
+    subtitle: "这一页从书签里溜走了。换条路，继续找答案。"
+    background: /img/404-bookmark-guide.png
 
 post_meta:
     # Home Page
@@ -561,7 +561,7 @@ comments:
     text: true
     # Lazyload: The comment system will be load when comment element enters the browser's viewport.
     # If you set it to true, the comment count will be invalid
-    lazyload: false
+    lazyload: true
     # Display comment count in post's top_img
     count: false
     # Display comment count in Home Page
@@ -1082,10 +1082,12 @@ inject:
         # - <link rel="stylesheet" href="/xxx.css">
         - <link rel="stylesheet" href="/css/custom.css">
         - <link rel="stylesheet" href="/css/observatory.css">
+        - <link rel="stylesheet" href="/css/correctness.css">
 
     bottom:
         # - <script src="xxxx"></script>
-        - <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+        - <script src="/js/sidebar-accessibility.js"></script>
+        - <script src="/js/404-search.js"></script>
         # 引入我们刚才写的 rightmenu.js
         - <script src="/js/rightmenu.js"></script>
 
@@ -1133,11 +1135,11 @@ CDN:
         # disqusjs_css:
         # docsearch_css:
         # docsearch_js:
-        # egjs_infinitegrid:
+        egjs_infinitegrid: /vendor/infinitegrid/infinitegrid.min.js
         # fancybox:
         # fancybox_css:
         # fireworks:
-        # fontawesome:
+        fontawesome: /vendor/fontawesome/css/all.min.css
         # gitalk:
         # gitalk_css:
         # giscus:
@@ -1156,10 +1158,10 @@ CDN:
         # prismjs_js:
         # prismjs_lineNumber_js:
         # pjax:
-        # sharejs:
-        # sharejs_css:
-        # snackbar:
-        # snackbar_css:
+        sharejs: /vendor/sharejs/js/social-share.min.js
+        sharejs_css: /vendor/sharejs/css/share.min.css
+        snackbar: /vendor/snackbar/snackbar.min.js
+        snackbar_css: /vendor/snackbar/snackbar.min.css
         # translate:
         # twikoo:
         # typed:
