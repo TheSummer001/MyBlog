@@ -21,6 +21,19 @@ Choose the smallest canonical owner before editing:
 
 Prefer configuration and `source/` overrides over editing Butterfly source. Keep YAML at two-space indentation and follow the existing Pug, Stylus, and JavaScript style. Article front matter keeps `title`, `date`, `updated`, `tags`, `categories`, `keywords`, and `description`; reuse existing tag spellings.
 
+## Article structure and rhythm
+
+Canonical rules for post bodies; examples and the full checklist live in `CLAUDE.md` 写作风格指南 and the `avoid-ai-writing-zh` skill.
+
+- Body keeps 4–5 `##` sections; with `## 总结` and `## 参考资料` the post holds 6–7 headings total. Merge related sections instead of nesting `###`.
+- Section headings are formal noun phrases of 2–10 characters. No questions, colloquial phrases, slogans, or conclusions stated in the heading.
+- Rhythm is deliberately uneven: one main section of 6–12 paragraphs and at least one short section of 2–3 paragraphs. Avoid uniform four-paragraph sections.
+- Open with 2–4 paragraphs straight into the problem, then `<!-- more -->`; close with `## 总结` (3–5 points, no well-wishing).
+- Code blocks use lowercase language tags, Chinese comments, and the project's real stack (Java/Spring) rather than another language.
+- `## 参考资料` lists only verifiable official documentation or repository links; internal links may only point to earlier-published posts.
+- Do not invent company names, internal system names, or log excerpts; label measurements as test-environment or local-test data.
+- De-AI-writing limits: at most 2 bold spans, no em dashes, at most one "not X but Y" construction, no collective "我们", no announcement transitions, no symmetric closing lines.
+
 ## Commands and commit gate
 
 - Install from the lockfile: `npm ci`.
