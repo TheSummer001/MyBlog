@@ -20,6 +20,8 @@ description: Windows Terminal 明明支持 ANSI，Java Agent CLI 却仍然回退
 
 真正的问题不是终端不支持 ANSI，而是 Java CLI 在创建交互式终端时走进了错误的降级路径。
 
+这个 CLI 的其他几块设计单独写过：[并行工具执行](https://blog.tooonran.top/2026/03/11/%E4%B8%80%E6%AC%A1%E5%B9%B6%E5%8F%91%204%20%E4%B8%AA%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%EF%BC%9AAgent%20%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/)、[上下文预算](https://blog.tooonran.top/2026/03/28/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E5%B0%B1%E9%82%A3%E4%B9%88%E5%A4%A7%EF%BC%9AToken%20%E9%A2%84%E7%AE%97%E5%88%86%E9%85%8D%E4%B8%8E%E5%8E%8B%E7%BC%A9/)、[任务编排](https://blog.tooonran.top/2026/04/25/%E4%BB%8E%20ReAct%20%E5%88%B0%20Plan-and-Execute%EF%BC%9A%E6%8A%8A%E4%BB%BB%E5%8A%A1%E6%8B%86%E6%88%90%20DAG/)、[人工审批](https://blog.tooonran.top/2026/05/19/%E4%BA%BA%E5%9C%A8%E5%9B%9E%E8%B7%AF%EF%BC%9AAgent%20%E7%9A%84%E9%AB%98%E9%A3%8E%E9%99%A9%E5%8A%A8%E4%BD%9C%E8%AF%A5%E5%9C%A8%E5%93%AA%E4%B8%80%E6%AD%A5%E5%81%9C%E4%B8%8B%E6%9D%A5/)。
+
 <!-- more -->
 
 ## 现象：颜色正常，inline 却被禁用

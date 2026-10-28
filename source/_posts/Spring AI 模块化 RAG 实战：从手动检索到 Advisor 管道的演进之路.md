@@ -17,6 +17,8 @@ description: 记录 IntelliRAG 项目从手动构建 RAG 流程到全面采用 S
 
 IntelliRAG 是一个基于 Spring AI Alibaba 构建的多租户 RAG 知识库平台。在最近的重构中，我们将整个 RAG 问答链路从手工拼接的模式迁移到了 Spring AI 的 Advisor 架构，并在此基础上实现了 ES 混合检索、Redis 对话记忆和查询重写。本文将复盘整个过程，分享架构设计和踩坑心得。
 
+这条链路的上游环节写在另外两篇里：文档怎么传上来、分片状态怎么管，见[百兆文档上传优化](https://blog.tooonran.top/2026/04/15/%E7%99%BE%E5%85%86%E6%96%87%E6%A1%A3%E4%B8%8A%E4%BC%A0%E4%BC%98%E5%8C%96%EF%BC%9A%E5%88%86%E7%89%87%E3%80%81%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0%E4%B8%8E%20Redis%20BitMap/)；上传之后怎么异步解析、切块、向量化，见 [Kafka 文档异步处理](https://blog.tooonran.top/2026/05/12/Kafka%20%E6%96%87%E6%A1%A3%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%EF%BC%9A%E4%B8%8A%E4%BC%A0%E3%80%81%E8%A7%A3%E6%9E%90%E3%80%81%E5%88%87%E5%9D%97%E3%80%81%E5%90%91%E9%87%8F%E5%8C%96%E6%80%8E%E4%B9%88%E8%A7%A3%E8%80%A6/)。
+
 ## 背景：重构前的架构痛点
 
 重构前，`RagChatServiceImpl` 的核心逻辑长这样：
